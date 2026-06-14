@@ -421,14 +421,14 @@ body {
 }
 
 .main-content > ol > li > a {
-  color: #4f46e5 !important;
+  color: #475569 !important;
   font-weight: 760;
-  text-decoration-color: rgba(79, 70, 229, 0.28);
+  text-decoration-color: rgba(71, 85, 105, 0.28);
 }
 
 .main-content > ol > li > a:hover {
-  color: #be185d !important;
-  text-decoration-color: rgba(190, 24, 93, 0.42);
+  color: #b45309 !important;
+  text-decoration-color: rgba(180, 83, 9, 0.42);
 }
 
 .main-content details {
@@ -549,12 +549,12 @@ body {
   }
 
   .main-content > ol > li > a {
-    color: #a5b4fc !important;
-    text-decoration-color: rgba(165, 180, 252, 0.35);
+    color: #cbd5e1 !important;
+    text-decoration-color: rgba(203, 213, 225, 0.32);
   }
 
   .main-content > ol > li > a:hover {
-    color: #f0abfc !important;
-    text-decoration-color: rgba(240, 171, 252, 0.45);
+    color: #fbbf24 !important;
+    text-decoration-color: rgba(251, 191, 36, 0.45);
   }
 }
