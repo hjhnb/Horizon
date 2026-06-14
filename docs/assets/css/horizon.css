@@ -255,6 +255,10 @@ body {
   opacity: 0.9;
 }
 
+.page-header .btn {
+  display: none !important;
+}
+
 .main-content {
   max-width: 940px;
   padding: 2.6rem 1.4rem 4rem !important;
@@ -439,6 +443,8 @@ body {
   border: 1px solid var(--hz-border);
   border-radius: 999px;
   background: var(--hz-surface);
+  pointer-events: none;
+  cursor: default;
 }
 
 @media (max-width: 640px) {
