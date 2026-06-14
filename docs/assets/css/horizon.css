@@ -388,12 +388,15 @@ body {
   padding: 0.16rem 0.48rem !important;
   border-radius: 999px !important;
   text-align: center;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: none;
 }
 
-.score-badge[data-tier="high"] { background: var(--hz-danger) !important; }
-.score-badge[data-tier="good"] { background: var(--hz-link) !important; }
-.score-badge[data-tier="mid"]  { background: var(--hz-accent) !important; }
-.score-badge[data-tier="low"]  { background: var(--hz-text-muted) !important; }
+.score-badge[data-tier="high"] { background: #9f3a4a !important; }
+.score-badge[data-tier="good"] { background: #376f6a !important; }
+.score-badge[data-tier="mid"]  { background: #9a6b2f !important; }
+.score-badge[data-tier="low"]  { background: #6b7280 !important; }
 
 .source-line {
   border-left-color: var(--hz-link) !important;
