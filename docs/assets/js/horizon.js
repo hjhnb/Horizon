@@ -124,9 +124,36 @@
     }
   }
 
+  /** Add a compact back-to-home action beside the article overview */
+  function addArticleHomeButton() {
+    if (document.getElementById('lang-zh') || document.getElementById('lang-en')) return;
+
+    var overview = document.querySelector('.main-content > blockquote:first-of-type');
+    if (!overview || overview.classList.contains('article-overview')) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'article-overview-bar';
+
+    overview.classList.add('article-overview');
+    overview.parentNode.insertBefore(bar, overview);
+    bar.appendChild(overview);
+
+    var home = document.createElement('a');
+    home.className = 'home-button';
+    var cssLink = document.querySelector('link[href*="/assets/css/horizon.css"]');
+    var href = cssLink ? cssLink.getAttribute('href') : '';
+    var marker = '/assets/css/horizon.css';
+    var markerIndex = href.indexOf(marker);
+    home.href = markerIndex >= 0 ? href.slice(0, markerIndex) + '/' : '/Horizon/';
+    home.textContent = '返回主页';
+    home.setAttribute('aria-label', '返回主页');
+    bar.appendChild(home);
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     processScoreBadges();
     markSemanticElements();
     setupLanguageToggle();
+    addArticleHomeButton();
   });
 })();
