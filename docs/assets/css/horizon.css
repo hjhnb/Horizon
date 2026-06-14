@@ -365,7 +365,7 @@ body {
 
 .article-overview-bar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   margin: 0.8rem 0 1.4rem;
 }
@@ -383,22 +383,24 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.6rem;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid var(--hz-border);
+  min-height: 2.55rem;
+  padding: 0.45rem 0.86rem;
+  border: 1px solid #d7c3f4;
   border-radius: 8px;
-  background: var(--hz-surface);
-  color: var(--hz-link) !important;
+  background: #f6f0ff;
+  color: #6d28d9 !important;
   font-size: 0.9rem;
   font-weight: 750;
   text-decoration: none !important;
   white-space: nowrap;
-  box-shadow: var(--hz-shadow);
+  box-shadow: 0 10px 26px rgba(109, 40, 217, 0.1);
+  flex: 0 0 auto;
 }
 
 .home-button:hover {
-  border-color: var(--hz-link);
-  color: var(--hz-link-hover) !important;
+  border-color: #a78bfa;
+  color: #581c87 !important;
+  background: #efe4ff;
   transform: translateY(-1px);
 }
 
@@ -411,10 +413,22 @@ body {
 
 .main-content > ol > li {
   border-bottom: 1px solid var(--hz-border);
+  color: #334155;
 }
 
 .main-content > ol > li:last-child {
   border-bottom: 0;
+}
+
+.main-content > ol > li > a {
+  color: #4f46e5 !important;
+  font-weight: 760;
+  text-decoration-color: rgba(79, 70, 229, 0.28);
+}
+
+.main-content > ol > li > a:hover {
+  color: #be185d !important;
+  text-decoration-color: rgba(190, 24, 93, 0.42);
 }
 
 .main-content details {
@@ -505,11 +519,42 @@ body {
   }
 
   .article-overview-bar {
-    flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
   }
 
   .home-button {
-    align-self: flex-start;
+    min-width: 4.8rem;
+    padding-inline: 0.7rem;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .home-button {
+    border-color: #4c3b69;
+    background: #241b33;
+    color: #c4b5fd !important;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  }
+
+  .home-button:hover {
+    border-color: #7c3aed;
+    background: #2f2142;
+    color: #ddd6fe !important;
+  }
+
+  .main-content > ol > li {
+    color: #cbd5e1;
+  }
+
+  .main-content > ol > li > a {
+    color: #a5b4fc !important;
+    text-decoration-color: rgba(165, 180, 252, 0.35);
+  }
+
+  .main-content > ol > li > a:hover {
+    color: #f0abfc !important;
+    text-decoration-color: rgba(240, 171, 252, 0.45);
   }
 }

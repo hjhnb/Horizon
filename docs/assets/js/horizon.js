@@ -136,7 +136,6 @@
 
     overview.classList.add('article-overview');
     overview.parentNode.insertBefore(bar, overview);
-    bar.appendChild(overview);
 
     var home = document.createElement('a');
     home.className = 'home-button';
@@ -148,6 +147,7 @@
     home.textContent = '返回主页';
     home.setAttribute('aria-label', '返回主页');
     bar.appendChild(home);
+    bar.appendChild(overview);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
