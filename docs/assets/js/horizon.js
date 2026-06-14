@@ -1,11 +1,17 @@
 (function () {
   'use strict';
 
-  /** Replace ⭐️ N/10 with a colored badge in h2, h3, and li elements */
+  /** Replace score markers: badges in headings, hidden in the top TOC */
   function processScoreBadges() {
     var scoreRe = /⭐️\s*(\d+(?:\.\d+)?)\/10/;
+    var tocScoreRe = /\s*⭐️\s*\d+(?:\.\d+)?\/10/;
     var targets = document.querySelectorAll('.main-content h2, .main-content h3, .main-content li');
     targets.forEach(function (el) {
+      if (el.matches('.main-content > ol > li')) {
+        el.innerHTML = el.innerHTML.replace(tocScoreRe, '');
+        return;
+      }
+
       var m = el.innerHTML.match(scoreRe);
       if (!m) return;
       var score = parseFloat(m[1]);
